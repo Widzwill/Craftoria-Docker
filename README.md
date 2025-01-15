@@ -1,6 +1,6 @@
-# Craftoria Server - 1.4.0
+# Craftoria Server - 1.12.0
 
-This repository provides a Docker image for running a Craftoria 1.4.0 server.
+This repository provides a Docker image for running a Craftoria  1.12.0 server.
 
 ## Getting Started
 
@@ -13,8 +13,8 @@ To use this Docker image, follow the instructions below:
 ### Usage
 
 1. **Pull the Docker image from the registry:**
-   ```bash
-   docker pull ghcr.io/pxlcoarl/craftoriadocker:latest
+   ```
+   widzwill/docker-minecraft-craftoria-server:LATEST
    ```
 2. **Run the Docker container:**   
    *Make sure to edit the `**placeholder**` values!*   
