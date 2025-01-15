@@ -6,8 +6,8 @@ modpack:
   
 install:
   mcVersion:
-  loaderVersion: 21.1.58
-  modpackUrl: https://mediafilez.forgecdn.net/files/5762/167/Craftoria-1.4.0.zip
+  loaderVersion: 21.1.93
+  modpackUrl: https://mediafilez.forgecdn.net/files/6075/880/Craftoria-1.12.0.zip
   installerUrl: "https://maven.neoforged.net/releases/net/neoforged/neoforge/{{@loaderversion@}}/neoforge-{{@loaderversion@}}-installer.jar"
   
   ignoreFiles:
@@ -15,7 +15,7 @@ install:
     - resources/**
   additionalFiles:
   localFiles: ~
-  
+  a
   installerArguments:
     - "--installServer"
   modpackFormat: curse
@@ -32,6 +32,7 @@ install:
       - 690971 # SeasonHUD
       - 455508 # Iris
       - 1089803 # Better Modlist
+      - 511319 # Reese's Sodium Options
       
   baseInstallPath: 
   
@@ -49,11 +50,11 @@ install:
 
 launch:
   # specifies the max amount of ram the server is supposed to launch with (Xmx)
-  maxRam: ${MAX_RAM}
+  maxRam: 6G
   # specifies the minimal amount of ram the server is supposed to launch with (Xms)
-  minRam: ${MIN_RAM}
+  minRam: 3G
   # specifies whether the server is supposed to auto restart after crash
-  autoRestart: ${AUTO_RESTART}
+  autoRestart: true
   javaArgs:
     - "-XX:+UseG1GC"
     
