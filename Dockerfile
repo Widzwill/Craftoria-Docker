@@ -5,9 +5,9 @@ RUN apk --no-cache --update add bash openjdk21 curl
 WORKDIR /data
 
 RUN if [ -z "$(ls -A /data)" ]; then \
-        curl -L "https://github.com/widzwill/Craftoria-Docker/releases/download/docker-release/Craftoria-Server-1.12.0.tar" -o /tmp/file.tar.gz && \
-        tar -xzf /tmp/file.tar.gz -C /data && \
-        rm -r /tmp/file.tar.gz; \
+        curl -L "https://github.com/Widzwill/Craftoria-Docker/releases/download/docker-release/Craftoria-Server-1.12.0.tar" -o /tmp/file.tar && \
+        tar -xzf /tmp/file.tar -C /data && \
+        rm -r /tmp/file.tar; \
     else \
         echo "/data directory is not empty. Skipping download."; \
     fi
