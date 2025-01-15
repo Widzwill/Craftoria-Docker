@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM alpine:latest
 
 RUN apk --no-cache --update add bash openjdk21 curl
 
