@@ -11,6 +11,21 @@ name: Manually Publish Docker image
 
 on:
   workflow_dispatch:
+     inputs:
+      tags:
+        description: 'Image Tags'
+        required: true
+        default: 'latest'
+        type: choice
+        options:
+
+      labels:
+        description: 'Image labels'
+        required: true
+        default: 'latest'
+        type: choice
+        options:
+
 
 jobs:
   push_to_registry:
@@ -44,8 +59,8 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: latest
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ inputs.tags }}
+          labels: ${{ inputs.labels }}
 
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v2
