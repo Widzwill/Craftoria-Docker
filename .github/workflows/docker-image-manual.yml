@@ -18,14 +18,14 @@ on:
         default: 'latest'
         type: choice
         options:
-
+        - latest
       labels:
         description: 'Image labels'
         required: true
         default: 'latest'
         type: choice
         options:
-
+        - latest
 
 jobs:
   push_to_registry:
